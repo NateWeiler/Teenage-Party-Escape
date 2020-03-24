@@ -10,13 +10,13 @@ html {
 }
 
 body {
-  max-width: 960px;
-  margin: 0 auto;
+  max-width: 90%;
+  margin: 0;
 
 }
 
 nav {
-  background-color: brown;
+  background-color: mediumturquoise;
   display:flex;
   width: 100%;
   justify-content: space-between;
@@ -24,12 +24,11 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: black;
+  color: gold;
 }
 
 nav h1 {
-  font-size: 3.5rem;
-  padding: 1rem;
+  font-size: 16px;
 }
 
 nav ul {
@@ -38,8 +37,7 @@ nav ul {
 }
 
 nav ul a {
-  font-size: 2.5rem;
-  padding: 1rem;
+  font-size: 16px;
   display: flex;
 
 }
