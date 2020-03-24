@@ -1,0 +1,19 @@
+<!doctype html>
+<title>{% block title %}{% endblock %} – Teenage Party Escape</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+<nav>
+  <h1><a class="home" href="{{ url_for('index') }}">Teenage Party Escape</a></h1>
+  <ul>
+    <li><a href="{{ url_for('game.play')}}">Play</a></li>
+    <li><a href="{{ url_for('game.about')}}">About</a></li>
+  </ul>
+</nav>
+<section class="content">
+  <header>
+    {% block header%}{% endblock %}
+  </header>
+  {% for message in get_flashed_messages() %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+  {% block content %}{% endblock %}
+</section>
