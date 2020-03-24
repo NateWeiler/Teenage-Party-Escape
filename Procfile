@@ -1,1 +1,1 @@
-web: gunicorn "madness:create_app()"
+web: gunicorn "flask_adventure_game:create_app()"
