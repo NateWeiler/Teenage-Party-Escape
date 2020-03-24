@@ -1,1 +1,1 @@
-web: gunicorn "teenage-party-escape:create_app()"
+web: gunicorn "teenage:create_app()"
