@@ -1,1 +1,1 @@
-web: gunicorn "flask_adventure_game:create_app()"
+web: gunicorn "teenage-party-escape:create_app()"
