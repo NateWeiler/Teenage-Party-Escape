@@ -1,0 +1,32 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+antiorm = "==1.2.1"
+attrs = "==19.3.0"
+click = "==7.1.1"
+coverage = "==5.0.4"
+db = "==0.1.1"
+db-sqlite3 = "==0.0.1"
+gunicorn = "==20.0.4"
+importlib-metadata = "==1.5.0"
+itsdangerous = "==1.1.0"
+more-itertools = "==8.2.0"
+pluggy = "==0.13.1"
+py = "==1.8.1"
+pyparsing = "==2.4.6"
+pytest = "==5.3.5"
+six = "==1.14.0"
+wcwidth = "==0.1.8"
+zipp = "==2.1.0"
+Flask = "==1.1.1"
+Jinja2 = "==2.11.1"
+MarkupSafe = "==1.1.1"
+Werkzeug = "==1.0.0"
+
+[requires]
+python_version = "3.8"
