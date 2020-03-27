@@ -1,11 +1,7 @@
-{% extends 'base.html' %}
-
-{% block header %}
-  <h1>{% block title%}Welcome!{% endblock %}</h1>
-{% endblock %}
-
-{% block content %}
-  <p>Will you be sble to Escape?</p>
-  <p>Press <a href="#">Start</a> to see if you can do it.</p>
-  <p><a href="{{ url_for('auth.register') }}">Register</a> or <a href="{{ url_for('auth.login') }}">Login</a></p>
+{% extends 'base.html' %} {% block header %}
+<h1>{% block title%}Welcome!{% endblock %}</h1>
+{% endblock %} {% block content %}
+<p>Will you be able to PARTY</p>
+<p>Press <a href="#">Start</a> to see if you can do it.</p>
+<p><a href="{{ url_for('auth.register') }}">Register</a> or <a href="{{ url_for('auth.login') }}">Login</a></p>
 {% endblock %}
