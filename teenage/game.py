@@ -52,9 +52,9 @@ class Screwed(Scene):
 
     joke = [
         "Your Screwed. You are a failure.",
-         "Your will NEVER be going outside again.",
-         "HA Ha Ha Ha....",
-         "You will be watching your friends play outside now."
+print "Your will NEVER be going outside again.",
+print "HA Ha Ha Ha....",
+print "You will be watching your friends play outside now."
     ]
 
     def enter(self, kid):
