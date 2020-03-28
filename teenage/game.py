@@ -1,57 +1,19 @@
-#!/bin/python3
+from flask import (
+    Blueprint, flash, g, render_template, redirect, request, session, url_for
+    )
 
-# Class Hierarchy
-# * Map
-#   - next_scene
-#   - opening_scene
-# * Engine
-#   - play
-# * Scene
-#   - enter
-#   * Screwed
-#   * Basement
-#   * Window
-#   * Garage
-#   * End
-# * Person
-#   - yell
-#   - silent
-#   * Kid
-#   * Parents
+from teenage.db import get_db
+from teenage import scenes
+
+bp = Blueprint('game', __name__, url_prefix='/game')
 
 from sys import exit
-from random import randint
 import time
-import math
-
-
-class Engine(object):
-
-    def __init__(self, scene_map, kid):
-        self.scene_map = scene_map
-        self.kid = kid
-
-    def play(self):
-        current_scene = self.scene_map.opening_scene()
-
-        while True:
-            print "\n--------")
-            next_scene_name = current_scene.enter(self.kid)
-            current_scene = self.scene_map.next_scene(next_scene_name)
-
-
-class Scene(object):
-
-
-def enter(self):
-    print "Scene processingy. Subclass so they need to use enter()."
-    exit(1)
-
     
 class Screwed(Scene):
 
-    joke = [
-        "Your Screwed. You are a failure.",
+joke = [
+    "Your Screwed. You are a failure.",
 print "Your will NEVER be going outside again.",
 print "HA Ha Ha Ha....",
 print "You will be watching your friends play outside now."
@@ -68,7 +30,7 @@ class Basement(Scene):
         print "You are 16 and been invited to a late night party with friends."
         print "You will sneak out of the house without your parents even"
         print "knowing you went out. You will wait for them to go to sleep"
-        print "the go out the garage, or you might use your bedroom Window."
+        print "the go out the garage, or you might use your bedroom window."
         print "\n"
         print "Now you are watching TV in t/"with you about the party. You"
         print "tell him to stop talking about it. You don't now wkid eitkid
@@ -109,7 +71,7 @@ class Basement(Scene):
             return 'window'
 
 
-class Window(Scene):
+class window(Scene):
 
     def enter(self, kid):
         print "You Put your phone on vibamount while you wait for everyone to fall asleep."
@@ -145,7 +107,7 @@ class Window(Scene):
             return 'screwed'
 
 
-class Party(Scene):
+class party(Scene):
 
     def enter(self, kid):
         print "You see some girls as you walk in to the party with your"
@@ -296,10 +258,10 @@ class Map(object):
 
     scenes = {
         'basement': Basement(),
-        'window': Window(),
+        'window': window(),
         'gagage': Garage(),
         'leave': Leave(),
-        'screwed': screwed(),
+        'screwed': Screwed(),
         'dinner': Dinner(),
         'win': Win()
     }
@@ -350,7 +312,7 @@ class Person(object):
         self.silent = 0
 
 
-class kid(Person):
+class Kid(Person):
     ''' class for kid '''
 
     healt = 1000
@@ -358,7 +320,7 @@ class kid(Person):
     amount = 5
 
 
-class parent(Person):
+class Parent(Person):
     ''' class for parent '''
     healt = 5000
     strength = 250
