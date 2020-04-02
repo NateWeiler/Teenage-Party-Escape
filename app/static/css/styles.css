@@ -1,0 +1,46 @@
+body {
+  background-color: #ffffff;
+}
+
+.visible {
+  display:block;
+}
+
+button {
+  color: #000000;
+  padding: 5px 10px 5px 10px;
+  height:30px;
+}
+
+.header {
+  background-color: rgb(17, 238, 227);
+}
+
+input {
+  color: #000000;
+}
+
+div.text-background {
+  background-color: #26bb3f;
+  max-width: 100%;
+  position:relative;
+}
+
+
+.button-div {
+  position: absolute;
+  bottom:0;
+  right:0;
+  margin: 10px;
+}
+
+img {
+  width: 400px;
+  height: 300px;
+  float:left;
+  margin-right: 10px;
+}
+
+footer {
+  padding-top: 50px;
+}
