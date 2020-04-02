@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row">
+  <img src="https://media.giphy.com/media/Sb7WSbjHFNIL6/giphy.gif"/>
+    <p>You are watching TV in the basement when your friend calls about the party.</p> 
+  <p>You tell him to stop talking about it. You don't know where your parents are at.</p>
+<p>
+    Do you hang up, or do you say you have another call?"
+  </p>
+  <div class="button-div">
+    <button type="button" onclick="window.location='/find_parents.html'">Have another call</button>
+    <button onclick="window.location='/screwed.html'" type="button">Hang up</button>
+  </div>
+</div>
+
+{% endblock %}

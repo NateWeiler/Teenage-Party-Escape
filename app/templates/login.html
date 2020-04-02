@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+  <h3>Start your Escape!</h3>
+  <form action="" method="post" name="login">
+      {{ form.hidden_tag() }}
+      <p>
+          Please enter your full name:<br>
+          {{ form.name(size=40) }}
+          {% for error in form.name.errors %}
+          <span style="color: red;">[{{ error }}]</span>
+          {% endfor %}
+          <br />
+          Please enter your email:<br>
+          {{ form.email(size=40) }}
+          {% for error in form.email.errors %}
+          <span style="color: red;">[{{ error }}]</span>
+          {% endfor %}<br>
+      </p>
+      <p>{{ form.remember_me }} Remember Me</p>
+      <p><input type="submit" value="Sign In"></p>
+  </form>
+{% endblock %}

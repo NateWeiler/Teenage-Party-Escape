@@ -1,0 +1,16 @@
+$def with (scene)
+
+<h1> $scene.name </h1>
+
+<pre>
+
+</pre>
+
+$if room.name == "screwed":
+  <p><a href="/intro">Would you like to play again?</a></p>
+$else:
+  <p>
+    <form action="/game" method="POST">
+      - <input type="text" placeholder="What do you want to do?" name="action"><input type="SUBMIT">
+    </form>
+  </p>

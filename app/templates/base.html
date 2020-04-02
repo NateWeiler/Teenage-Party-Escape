@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% if title %}
+      <title>{{ title }}</title>
+    {% else %}
+      <title>Teenage Party Escape</title>
+    {% endif %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href={{ url_for('static', filename='css/styles.css')}}/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico')}}">
+</head>
+<body>
+<div class="row header">
+    <header class="container">
+      <h1>Teenage Party Escape</h1>
+    </header>
+</div>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+        <li>{{ message }} </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+
+    <div class="container text-background">
+    <h2>{{ title }}</h2>
+      {% block content %}
+      {% endblock %}
+    </div>
+    <footer class="container">
+      Escape to have fun at the Party
+    </footer>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<div>
+      <img src="https://media.giphy.com/media/l0O2RkIguXFMKwHfi/giphy.gif"/>
+      <p>You quietly sneak down to the garage.</p>
+      <p>You forgot your dad change the passcode</p>
+      <p>Do you prop the door open or find the paper with the passcode?</p>
+    <div class="button-div">
+      <button type="button" onclick="window.location='/screwed.html'">Prop door open</button>
+      <button type="button" onclick="window.location='/passcode.html'">Find passcode</button>
+    </div>
+</div>
+<!-- <form method="post">
+  <input type="text" placeholder="Say something..."name="response">
+  <input type="submit" value="Submit">
+</form> -->
+
+{% endblock %}
