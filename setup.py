@@ -5,7 +5,7 @@ with open("README.md", "r") as f:
 
 
 setuptools.setup(
-    name="teenage"
+    name="app"
     version="0.0.1",
     author=""Nathan Weiler,
     author_email="nateweiler84@gmail.com",

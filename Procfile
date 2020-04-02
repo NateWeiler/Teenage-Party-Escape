@@ -1,1 +1,1 @@
-web: gunicorn "teenage:create_app()"
+web: gunicorn "app:create_app()"
